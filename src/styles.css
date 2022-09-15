@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+	list-style: none;
+	text-decoration: none;
+}
+
+:root {
+    --container-width-lg: 75%;
+	--container-width-md: 86%;
+	--container-width-sm: 90%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+
+.app {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+}
+
+.app::before {
+    content: "";
+    background: url("./assets/sky.jpg") no-repeat center center/cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.app .search {
+    text-align: center;
+    padding: 1rem;
+}
+
+.app input {
+    padding: 0.7rem 1.5rem;
+    text-align: center;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.8);
+    background: rgba(255,255,255,0.1);
+    color: #f8f8f8;
+}
+
+::placeholder {
+    color: #f8f8f8;
+}
+
+.container {
+    width: var(--container-width-lg);
+	margin: 0 auto;
+    padding: 0 1rem;
+    position: relative;
+    top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.app .top {
+    width: 100%;
+    position: relative;
+}
+
+.app .discription {
+    position: relative;
+    right: -90%;
+    transform-origin: 0 0;
+    transform: rotate(270deg);
+}
+
+.app .bottom {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    width: 100%;
+    margin: 4rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    background-color: rgba(255,255,255,0.2);   
+}
+
+.bold {
+    font-weight: 700;
+}
+
+/* ============== MEDIA QUERIES (MEDIUM DEVICES) ============== */
+
+@media screen and (max-width: 1024px) {
+	.container {
+		width: var(--container-width-md);
+	}
+
+	section {
+		margin-top: 6rem;
+	}
+}
+
+/* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
+
+@media screen and (max-width: 600px) {
+	.container {
+		width: var(--container-width-sm);
+	}
+
+	section > h2 {
+		margin-bottom: 2rem;
+	}
+}
