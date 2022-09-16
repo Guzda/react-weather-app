@@ -112,9 +112,6 @@ h1 {
 		width: var(--container-width-md);
 	}
 
-	section {
-		margin-top: 6rem;
-	}
 }
 
 /* ============== MEDIA QUERIES (SMALL DEVICES) ============== */
@@ -124,7 +121,19 @@ h1 {
 		width: var(--container-width-sm);
 	}
 
-	section > h2 {
-		margin-bottom: 2rem;
-	}
+    p.sm {
+        font-size: 0.9rem;
+    }
+
+    .app .bottom {
+        display: flex;
+        justify-content: space-evenly;
+        text-align: center;
+        width: 100%;
+        margin: 4rem auto;
+        padding: 1rem;
+        border-radius: 12px;
+        background-color: rgba(255,255,255,0.2);   
+    }
+
 }
